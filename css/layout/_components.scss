@@ -1,0 +1,82 @@
+// Card
+.card {
+  z-index: 1;
+  position: relative;
+  overflow: hidden; // Makes sure the border radius stays the same
+
+  background: get-color('white'); // Default background color
+  border-radius: 8px;
+  @include box-shadow(0px 2px 8px 4px get-color('black', 0.35));
+}
+
+// Horizotal line divider
+.divider {
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid get-color('offwhite');
+}
+
+// Button
+.btn {
+  display: inline-block; // Prevents the button from being split when viewport width is too small
+  cursor: pointer; // Need that Mickey Mouse hand!
+  color: get-color('white');
+  background: get-color('grey-dark');
+
+  letter-spacing: .1em; // Putting some space between letters for a nicer look
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  padding: 8px 24px;
+  border: none;
+  border-radius: 24px;
+  
+  @include transition(background-color 250ms $transition-custom);
+  @include box-shadow(0px 2px 4px 0px get-color('black', 0.35));
+  
+  &:hover {
+    background: get-color('black');
+  }
+
+  &:active {
+    background: get-color('grey-dark');
+
+    @include box-shadow(inset 0px 3px 8px 2px get-color('black', 0.5));
+  }
+}
+
+// Media container
+.media-container {
+  position: absolute;
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  // border-radius: 8px;
+
+  @include responsive('s') {
+    position: relative;
+  }
+
+  & > embed {
+    width: 100%;
+    height: 100%;
+    max-height: 912px; // Keeping the aspect ratio of my PDF file
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  & > img {
+    max-width: none;
+    height: 100%;
+  }
+
+  & > video {
+    // In-browser "Photoshop" <3
+    filter: contrast(1.2) saturate(1.25) hue-rotate(-4deg);
+  }
+}

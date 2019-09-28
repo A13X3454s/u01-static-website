@@ -1,0 +1,49 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 32px;
+  color: get-color('offwhite');
+  background: get-color('darker');
+  border-top: 1px solid #111111;
+
+  & i {
+    font-weight: 300;
+  }
+
+  // Social icons
+  .social {
+    li {
+      padding: 0;
+    }
+
+    a {
+      font-size: 24px;
+      padding: 15px 25px; // Some spacing between our social icons
+      transform: scale(1); // Playing it safe and resetting scale 
+                           // Browsers tend to do this automatically when applied to hover, 
+                           // but I'm sure there are some that do not.
+      @include transition(color 250ms ease, transform 250ms ease);
+    }
+
+    a:hover {
+      transform: scale(1.35); // Scale up icon on hover
+      color: get-color('white');
+    }
+  }
+
+  & > ul > li {
+    display: inline-flex;
+    padding: 0 16px;
+
+    & > a {
+      color: #999999;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

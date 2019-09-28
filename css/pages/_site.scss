@@ -1,0 +1,108 @@
+// Wildcard - targeting all elements
+* {
+  // Reset
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // Smooth scrolling when users click our anchor links
+  // (Doesn't work in inferior browsers such as Edge, IE and Safari)
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: $font-family;
+  font-size: 16px;
+  color: get-color('white');
+  background: get-color('black');
+  
+  width: 100%;
+  height: 100%;
+  line-height: 1.625;
+}
+
+body {
+  // Need some top padding since there is a fixed navbar (Doesn't work in Edge & IE)
+  scroll-padding-top: $navbar-height;
+
+  @include responsive('s') {
+    scroll-padding-top: $navbar-s-height; // Switch to our set height for the small breakpoint 
+  }
+}
+
+// Responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Location info buttons
+.location {
+  &--info {
+    align-self: center;
+    text-align: right;
+  }
+}
+
+.row {
+  @include responsive('s') {
+    // The .location class should be ignored
+    // the text and buttons should be on the same line so we need to keep using "flex-direction: row;"
+     &:not(.location) {
+      flex-flow: column nowrap;
+    }
+  }
+}
+
+// a,
+// .btn {
+//   &:focus {
+//     @include focus();
+//   }
+// }
+
+// Pages
+#page {
+  &-landing {
+    position: relative;
+    min-height: 500px;
+    background: url('../assets/arabica-aromatic-beverage-678654.webp') center / cover no-repeat; /* Fallback */
+    filter: saturate(1.5); // Color pop!
+    background-attachment: fixed;
+    
+    // Gradient should follow background
+    &::after {
+      z-index: -1; // Gradient should only cover background, not content
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(get-color('black', 0) 25%, get-color('black') 100%),
+                  radial-gradient(get-color('grey-darker', 0.75), get-color('black', 0.14));
+    }
+  }
+
+  &-menu {
+    background: url('../assets/mike-kenneally-tNALoIZhqVM-unsplash.webp') center / cover no-repeat;
+    background-attachment: fixed;
+
+    // Skip loading image on mobile devices
+    @include responsive('xs') {
+      background: get-color('grey-dark');
+    }
+  }
+  
+  &-locations {
+    background: url('../assets/art-beverage-black-982612.webp') center / cover no-repeat;
+    background-attachment: fixed;
+
+    // Skip loading image on mobile devices again
+    @include responsive('xs') {
+      background: get-color('grey-dark');
+    }
+  }
+}

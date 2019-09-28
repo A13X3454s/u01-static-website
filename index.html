@@ -1,0 +1,365 @@
+<!--
+  Disclaimer:
+  This is a school project - I do not own any of the videos/images on this site.
+
+  If you wish to have your material removed, please contact me at:
+  lacki.kritsimas@chasacademy.se
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="BigBean uses the highest quality coffeebeans imaginable. Learn more about our wide selection of drinks today.">
+    <title>BigBean&trade; Coffee</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300i,400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
+    <link rel="stylesheet" href="./lib/fontello-4619d2e6/css/fontello.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <!-- 
+      W3C Validator is going to throw scary warnings when setting the role attribute on semantic elements.
+
+      "Using the <footer> element will automatically communicate a section has a role of contentinfo. 
+      Developers should always prefer using the correct semantic HTML element over using ARIA, making sure to test for known issues in VoiceOver."
+      source: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role
+
+      These warnings should however be ignored because of this:
+
+      "For example, there are still support gaps in browsers and screen readers for exposing some landmarks.
+      When presented with situations like this, ignoring conformance warnings, and adding a redundant role to an element, may
+      be preferred to not exposing the correct landmark information."
+      source: https://a11yproject.com/posts/aria-landmark-roles/
+    -->
+    <header role="banner">
+      <nav class="container-fluid" role="navigation">
+        <div class="row">
+          <div class="col shrink mx-3 d-flex">
+            <div id="logo">
+              <a href="#">
+                <img src="./assets/logo.svg" alt="">
+                <span>
+                  BigBean<small>&trade;</small>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col pa-0">
+            <ul>
+              <li>
+                <a href="#page-specials">Specials</a>
+              </li>
+              <li>
+                <a href="#page-menu">Menu</a>
+              </li>
+              <li>
+                <a href="#page-history">Our story</a>
+              </li>
+              <li>
+                <a href="#page-locations">
+                  <i class="icon-location pr-1"></i>
+                  Locations
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Landing page -->
+    <main class="bg-black" role="main">
+      <section class="page fill-height" id="page-landing">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col text-center">
+              <h1 class="text-white">
+                BigBean<small>&trade;</small>
+              </h1>
+              <div class="divider"></div>
+              <h2 class="heading-4 text-white">Fueling Silicon Valley</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Specials page -->
+      <section class="page pt-10 mt-4" id="page-specials">
+        <div class="container">
+          <h2 class="page-title heading-1 text-white text-shadow mx-3">Specials</h2>
+          <!-- Special #1 -->
+          <article class="row card bg-offwhite ma-3">
+            <div class="col pa-0 align-self-center text-center">
+              <img src="./assets/7e77fe2ae2aa4e6cbfebb729c26bfa3e.webp" alt="Two for one special">
+            </div>
+            <div class="col">
+              <h3 class="headline ma-3 mt-5">Lorem ipsum dolor sit amet</h3>
+              <p class="ma-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat aliquet malesuada. Aliquam sagittis
+                augue et ante facilisis, vel venenatis metus fringilla. In eros arcu, convallis in scelerisque id, ornare ac
+                diam. Vestibulum bibendum egestas consequat. Fusce finibus mauris dui, eget faucibus sapien lacinia vel. Donec
+                in tellus nisi. Donec dui quam, semper in lobortis vitae, ullamcorper id nunc. Suspendisse tempor blandit
+                tincidunt. Phasellus hendrerit rutrum mauris quis placerat. Ut mollis condimentum quam, at consequat leo.
+                Phasellus a varius lacus, sit amet sagittis massa. Donec eleifend nisi mauris, auctor faucibus orci faucibus
+                et.
+              </p>
+              <div class="row">
+                <div class="col text-center">
+                  <a 
+                    href="https://www.youtube.com/watch?v=SsoOG6ZeyUI" 
+                    class="btn" 
+                    target="_blank"
+                    aria-label="Read more about this offer" 
+                    rel="noreferrer"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Special #2 -->
+          <article class="row card bg-white ma-3">
+            <div class="col">
+              <h3 class="headline ma-3 mt-5">Lorem ipsum dolor sit amet</h3>
+              <p class="ma-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat aliquet malesuada. Aliquam sagittis
+                augue et ante facilisis, vel venenatis metus fringilla. In eros arcu, convallis in scelerisque id, ornare ac
+                diam. Vestibulum bibendum egestas consequat. Fusce finibus mauris dui, eget faucibus sapien lacinia vel. Donec
+                in tellus nisi. Donec dui quam, semper in lobortis vitae, ullamcorper id nunc. Suspendisse tempor blandit
+                tincidunt. Phasellus hendrerit rutrum mauris quis placerat. Ut mollis condimentum quam, at consequat leo.
+                Phasellus a varius lacus, sit amet sagittis massa. Donec eleifend nisi mauris, auctor faucibus orci faucibus
+                et.
+              </p>
+              <div class="row">
+                <div class="col text-center">
+                  <a 
+                    href="" 
+                    class="btn" 
+                    target="_blank"
+                    aria-label="Read more about this offer" 
+                    rel="noreferrer"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col pa-0 align-self-center text-center breakpoint-order-first">
+              <img src="./assets/capuchino-cafe-caliente-espuma-sobre-fondo-blanco_33725-33.webp" alt="Cappuccino">
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Menu page -->
+      <section class="page pt-10 mt-4" id="page-menu">
+        <div class="container drop-shadow-3d">
+          <h2 class="page-title page-title--right heading-1 text-white mx-3">Menu</h2>
+          <div class="row card bg-white mt-3">
+            <div class="col text-center">
+              <div class="my-3">
+                <h3 class="headline ma-0">Choose from our wide selection of hot and cold drinks</h3>
+                <p class="subheading">Some of these drinks are hot, others are cold. Wow!</p>
+              </div>
+            </div>
+          </div>
+          <div class="row fill-height mx-3 mb-3 mt-0">
+            <div class="col pa-0">
+              <div class="media-container">
+                <embed src="./assets/doc-coffee-shop-menu-1510702357.pdf#view=FitV&scrollbar=0&toolbar=0" type="application/pdf" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- History page -->
+      <section class="page pt-10 mt-4" id="page-history">
+        <div class="container">
+          <h2 class="page-title heading-1 text-white text-shadow mx-3">Our story</h2>
+          <div class="row card ma-3">
+            <div class="col pa-0 breakpoint-m">
+              <div class="media-container align-items-center justify-content-center">
+                <video autoplay muted loop>
+                  <source src="./assets/cinemagraph-of-a-coffee.mp4" type="video/mp4">
+                  <p class="text-black">
+                    Your browser is ancient, come back when you have something more modern.
+                  </p>
+                </video>
+              </div>
+            </div>
+            <div class="col bg-white">
+              <div class="row">
+                <div class="col text-black">
+                  <blockquote>
+                    <p class="ma-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tristique commodo porttitor. Maecenas porttitor sem eu
+                      enim vestibulum iaculis.
+                    </p>
+                  </blockquote>
+                  <p class="ma-2">
+                    Etiam euismod quam orci, in condimentum ipsum venenatis gravida.
+                    Ut ut rutrum purus. Aenean consequat libero in purus ultrices vehicula. Suspendisse tristique ex vitae
+                    lectus tempus, ut porttitor mauris imperdiet.
+                  </p>
+                  <p class="ma-2">
+                    Vivamus sed nibh egestas, ultrices lectus at, blandit enim. Fusce et augue vel nulla rhoncus ullamcorper
+                    quis in libero. Phasellus eget nibh ac orci maximus condimentum. Aenean mauris eros, elementum rhoncus
+                    maximus nec, volutpat at mi. Pellentesque facilisis felis nulla, vitae tempus turpis volutpat id.
+                    Vestibulum imperdiet faucibus imperdiet. Etiam feugiat magna sed porta rhoncus. Curabitur ultrices lectus
+                    in scelerisque dictum. Aliquam erat volutpat.
+                  </p>
+                  <p class="ma-2">
+                    Nulla eu finibus nisi. Aliquam ligula purus, aliquet vitae urna ut, ullamcorper commodo tellus. Quisque
+                    nec metus vitae orci lacinia rhoncus non sit amet ipsum. Sed luctus nulla sed feugiat vehicula. Sed vitae
+                    leo egestas, tempor justo vel, mattis mi. Donec sodales nisl leo, vel imperdiet justo eleifend a. Nunc
+                    consequat commodo tortor commodo aliquet&hellip;
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <a 
+                    href="https://www.youtube.com/watch?v=9BnLbv6QYcA" 
+                    class="btn" 
+                    target="_blank" 
+                    aria-label="Read more about our history"
+                    rel="noreferrer"
+                  >
+                    Read more about our history
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Locations page -->
+      <section class="page pt-10 mt-4" id="page-locations">
+        <div class="container drop-shadow-3d">
+          <h2 class="page-title page-title--right heading-1 text-white mx-3">Locations</h2>
+          <div class="row card ma-3">
+            <ul class="col-8 bg-white">
+              <!-- Location -->
+              <li class="row location">
+                <div class="col bg-white">
+                  <p class="text-black font-weight-bold text-uppercase">Location</p>
+                  <p class="text-grey">Closed</p>
+                </div>
+                <div class="col location--info bg-white">
+                  <button class="btn" aria-label="Location information">
+                    <i class="icon-info-circled"></i>
+                  </button>
+                </div>
+              </li>
+              <!-- Location -->
+              <li class="row location">
+                <div class="col bg-white">
+                  <p class="text-black font-weight-bold text-uppercase">Location</p>
+                  <p class="text-grey">
+                    Open until <time datetime="00:00">12:00 AM</time>
+                  </p>
+                </div>
+                <div class="col location--info bg-white">
+                  <button class="btn" aria-label="Location information">
+                    <i class="icon-info-circled"></i>
+                  </button>
+                </div>
+              </li>
+              <!-- Location -->
+              <li class="row location">
+                <div class="col bg-white">
+                  <p class="text-black font-weight-bold text-uppercase">Location</p>
+                  <p class="text-grey">Closed</p>
+                </div>
+                <div class="col location--info bg-white">
+                  <button class="btn" aria-label="Location information">
+                    <i class="icon-info-circled"></i>
+                  </button>
+                </div>
+              </li>
+              <!-- Location -->
+              <li class="row location">
+                <div class="col bg-white">
+                  <p class="text-black font-weight-bold text-uppercase">Location</p>
+                  <p class="text-grey">
+                    Open until <time datetime="11:00">11:00 PM</time>
+                  </p>
+                </div>
+                <div class="col location--info bg-white">
+                  <button class="btn" aria-label="Location information">
+                    <i class="icon-info-circled"></i>
+                  </button>
+                </div>
+              </li>
+              <!-- Location -->
+              <li class="row location">
+                <div class="col bg-white">
+                  <p class="text-black font-weight-bold text-uppercase">Location</p>
+                  <p class="text-grey">Closed</p>
+                </div>
+                <div class="col location--info bg-white">
+                  <button class="btn" aria-label="Location information">
+                    <i class="icon-info-circled"></i>
+                  </button>
+                </div>
+              </li>
+              <!-- Location -->
+              <li class="row location">
+                <div class="col bg-white">
+                  <p class="text-black font-weight-bold text-uppercase">Location</p>
+                  <p class="text-grey">Closed</p>
+                </div>
+                <div class="col location--info bg-white">
+                  <button class="btn" aria-label="Location information">
+                    <i class="icon-info-circled"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <div class="col-4 pa-0 breakpoint-m">
+              <div class="media-container">
+                <img src="./assets/5d4d13ad7a34740c5a78596f6e74dd9b.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black" role="contentinfo">
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/watch?v=Ydje1ivynIM">Privacy policy</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=iGmU29KpjoM">Contact us</a>
+        </li>
+      </ul>
+      <ul class="social">
+        <li>
+          <a href="#" aria-label="Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Instagram">
+            <i class="icon-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Youtube">
+            <i class="icon-youtube-play"></i>
+          </a>
+        </li>
+      </ul>
+      <p>
+        <i>© 2019 BigBean Coffee. All rights reserved.</i>
+      </p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

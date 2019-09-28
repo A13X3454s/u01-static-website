@@ -1,0 +1,108 @@
+// Headings
+// Looping through all headings and applying font-size
+@for $i from 6 through 1 {
+  h#{$i}, 
+  .heading-#{$i} {
+    font-size: modular-scale($font-size-base, $heading-scale, $i, 6);
+    font-family: $font-family-alt;
+    color: get-color('grey-dark');
+    margin: 12px 0;
+    line-height: 1.5;
+
+    @include transition(font-size 250ms ease);
+    
+    @include responsive('s') {
+      font-size: modular-scale($font-size-base, $heading-scale / 1.05, $i, 6); // 15:16 Minor second
+    }
+
+    @include responsive('xs') {
+      font-size: modular-scale($font-size-base, $heading-scale / 1.119, $i, 6); // 4:5 Major third
+    }
+  }
+}
+
+.page-title {
+  z-index: 2; // Prevent text from hiding behind elements
+  position: absolute;
+  top: -104px; // Pixel counting, yay!
+
+  &--right {
+    right: 16px;
+  }
+
+  // More pixel counting - responsive pixel counting!
+  @include responsive('s') {
+    // top: -76px;
+    top: -87px;
+  }
+
+  @include responsive('xs') {
+    // top: -54px;
+    top: -55px;
+
+    // Center category title
+    width: fit-content; // Not supported by all browsers
+    margin-left: auto !important;
+    margin-right: auto !important;
+    right: 0;
+    left: 0;
+  }
+}
+
+.headline {
+  font-size: 34px;
+
+  // Immediately following paragraphs should have a different text color
+  & + p {
+    color: get-color('grey');
+  }
+
+  @include responsive('xs') {
+    font-size: 26px;
+  }
+}
+
+.subheading {
+  font-size: 20px;
+}
+
+blockquote {
+  position: relative;
+  border-radius: 4px;
+  padding: 8px 24px 8px 24px;
+  color: get-color('grey');
+  background: get-color('offwhite');
+
+  @include box-shadow(8px 8px 8px -6px get-color('black', 0.25));
+
+  p {
+    font-style: italic;
+    font-family: Georgia, Serif;
+  }
+
+  // Quotation marks
+  &::before,
+  &::after {
+    position: absolute;
+    // display: block;
+    height: 0; // Prevents quotation marks from ending up in the wrong place 
+    color: get-color('grey-light');
+
+    // Sets font-style, font-size, line-height and font-family all in one
+    font: italic 4em/1 $font-family-alt;
+  }
+
+  // Opening quotation mark
+  &::before {
+    content: '“';
+    left: -0.1em;
+    top: 0.1em;
+  }
+
+  // Closing quotation mark
+  &::after {
+    content: '”';
+    right: 0.25em;
+    bottom: 0.4em;
+  }
+}

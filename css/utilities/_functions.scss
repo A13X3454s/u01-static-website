@@ -1,0 +1,34 @@
+/// Gets a color from our pre-defined $colors variable, optionally applies alpha 
+//
+/// @param {Color} $color - Input color
+/// @param {Number} $a - Alpha
+/// @return {Color}
+@function get-color($color, $a: null) {
+  $res: map-get($colors, $color);
+  
+  // Get RGBA value if alpha was passed
+  @if $a {
+    $res: change-color($res, $alpha: $a);
+  }
+
+  @return $res;
+}
+
+/// Modular scale
+/// https://alistapart.com/article/more-meaningful-typography/#section2
+///
+/// @param {Number} - Value
+/// @param {Number} - Ratio
+/// @param {Number} - Current index in loop
+/// @param {Number} - Max loop index
+/// @return {Number}
+@function modular-scale($value, $ratio, $step, $max) {
+  $res: $value;
+
+  @for $i from $step through $max {
+    $res: $value * $ratio;
+    $value: $value * $ratio;
+  }
+
+  @return round($res);
+}

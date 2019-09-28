@@ -1,0 +1,56 @@
+// Bootstrap-style 12 column grid layout
+
+// Pages
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+
+  @include responsive('s') {
+    padding: 0;
+  }
+}
+
+// Grid container
+.container {
+  position: relative;
+  max-width: 1298px;
+  width: 100%;
+  margin: auto; // Centered
+  padding: 16px;
+
+  @include responsive('s') {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  // Full width container
+  &-fluid {
+    @extend .container;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  // Rows
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+
+    // Columns
+    .col {
+      position: relative;
+      flex: 1 0;
+      width: 100%;
+      padding: 16px;
+    }
+    
+    // Looping through the 12 columns and multiplying flex basis with the current index
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        @extend .col; // Inherit everything from .col and extend it
+        flex: 1 $flex-basis-base * $i; // Allow elements to grow and apply flex-basis
+      }
+    }
+  }
+}

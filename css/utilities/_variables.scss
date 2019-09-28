@@ -1,0 +1,55 @@
+/// Colors - Defining our color variables for consistent theming
+/// @type Map
+$colors: (
+  'black': #000000,
+  'white': #ffffff,
+  'offwhite': #f9f9f9,
+  'grey-light': #999999,
+  'grey': #666666,
+  'grey-dark': #333333,
+  'grey-darker': #222222
+) !default;
+
+/// Custom transition
+/// @type Transition
+$transition-custom: cubic-bezier(0.3, 0, 0.15, 1);
+
+/// Primary font-family
+/// @type List
+$font-family: 'Lato', sans-serif;
+
+/// Alternative font-family
+/// @type List
+$font-family-alt: 'Poppins', sans-serif;
+
+/// Baseline for font-size
+/// @type Number
+$font-size-base: 16px !default;
+
+/// Heading scale
+/// @type Number
+$heading-scale: 1.4 !default;
+
+/// Spacing baseline
+/// @type Number
+$spacing-base: 8px !default; // Margin and padding
+
+/// Breakpoint sizes for responsive media queries
+/// @see {mixin} responsive
+/// @type Map
+$breakpoints: (
+  xxs: 464px,
+  xs: 598px,
+  s: 789px,
+  m: 900px,
+  l: 1200px
+) !default;
+
+/// Flex grid
+/// @type Number
+$flex-basis-base: 8.333333% !default; // Lowest flex-basis value
+
+/// Navigation bar
+/// @type Number
+$navbar-height: 72px !default;
+$navbar-s-height: 105px !default; // Height for the 's' breakpoint

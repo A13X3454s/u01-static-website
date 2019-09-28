@@ -1,0 +1,207 @@
+// The structure is inspired by CSS frameworks such as Bootstrap and Vuetify
+// This is basically just a lot of overrides
+
+// Breakpoints
+// Generate classes to hide elements on specific breakpoint sizes
+.breakpoint {
+  @each $threshold, $width in $breakpoints {
+    &-#{$threshold} {
+      @include responsive($threshold) {
+        display: none !important;
+      }
+    }
+  }
+
+  // Flex order
+  // Had this been in production for real this class would have looked more like this:
+  // .breakpoint-xs-o-first, .breakpoint-s-order-first and so on... 
+  // I'd probably shorten the classname as well, maybe .break-xs-o-first?/
+  &-order-first {
+    @include responsive('s') {
+      // Cheating a bit by setting order to a negative value, 
+      // forcing the element to appear first in order
+       order: -1 !important;
+    }
+  }
+}
+
+// Margin & Padding
+// I should make this into a function instead of having this many loops
+// But I'm not a SASS expert yet!
+@for $i from 0 through 10 {
+  .ma-#{$i} {
+    margin: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 {
+  .mx-#{$i} {
+    margin-left: $spacing-base * $i !important;
+    margin-right: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 {
+  .my-#{$i} {
+    margin-top: $spacing-base * $i !important;
+    margin-bottom: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 {
+  .mt-#{$i} {
+    margin-top: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 {
+  .mr-#{$i} {
+    margin-right: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 {
+  .mb-#{$i} {
+    margin-bottom: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 {
+  .ml-#{$i} {
+    margin-left: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .pa-#{$i} {
+    padding: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .px-#{$i} {
+    padding-left: $spacing-base * $i !important;
+    padding-right: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .py-#{$i} {
+    padding-top: $spacing-base * $i !important;
+    padding-bottom: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .pt-#{$i} {
+    padding-top: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .pr-#{$i} {
+    padding-right: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .pb-#{$i} {
+    padding-bottom: $spacing-base * $i !important;
+  }
+}
+@for $i from 0 through 10 { 
+  .pl-#{$i} {
+    padding-left: $spacing-base * $i !important;
+  }
+}
+
+// Display
+.d-flex {
+  display: flex !important;
+}
+
+.shrink {
+  flex-shrink: 1 !important;
+  flex-grow: 0 !important;
+}
+
+.grow {
+  flex-grow: 0 !important;
+  flex-shrink: 1 !important;
+}
+
+// Typography
+.text {
+  &-uppercase {
+    text-transform: uppercase !important;
+  }
+  &-center {
+    text-align: center !important;
+  }  
+}
+
+.font {
+  &-weight-bold {
+    font-weight: bold !important;
+  }
+  &-italic {
+    font-style: italic !important;
+  }
+}
+
+// Alignment
+.justify {
+  &-content-center {
+    justify-content: center !important;
+  }
+  &-items-center {
+    justify-items: center !important;
+  }
+  &-self-center {
+    justify-self: center !important;
+  }
+}
+
+.align {
+  &-content-center {
+    align-content: center !important;
+  }
+  &-items-center {
+    align-items: center !important;
+  }
+  &-items-stretch {
+    align-items: stretch !important;
+  }
+  &-self-center {
+    align-self: center !important;
+  }
+}
+
+// Colors
+// Loop through colors and create text/background classes
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background: $value !important;
+  }
+  
+  .text-#{$key} {
+    color: $value !important;
+  }
+}
+
+// Height & Width
+.fill-height {
+  height: 100vh !important;
+}
+
+// Disable text selection
+.category,
+nav,
+#logo {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+// Drop shadow
+.drop-shadow-3d {
+  filter: drop-shadow(1px 1px 0 get-color('black', 0.25))
+          drop-shadow(2px 2px 0 get-color('black', 0.25)) 
+          drop-shadow(3px 3px 0 get-color('black', 0.25)) 
+          drop-shadow(4px 4px 0 get-color('black', 0.25));
+}
+
+// Text shadow
+.text-shadow {
+  text-shadow: 2px 2px 10px get-color('black', 0.35);
+}
+
