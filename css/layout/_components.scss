@@ -78,5 +78,6 @@
   & > video {
     // In-browser "Photoshop" <3
     filter: contrast(1.2) saturate(1.25) hue-rotate(-4deg);
+    flex-shrink: 0; // Fixes sizing issues in Firefox
   }
 }
