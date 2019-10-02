@@ -1034,10 +1034,6 @@ h1,
   font-size: 34px;
 }
 
-.headline + p {
-  color: #666666;
-}
-
 @media only screen and (max-width: 598px) {
   .headline {
     font-size: 26px;

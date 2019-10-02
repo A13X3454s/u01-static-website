@@ -52,11 +52,6 @@
 .headline {
   font-size: 34px;
 
-  // Immediately following paragraphs should have a different text color
-  & + p {
-    color: get-color('grey');
-  }
-
   @include responsive('xs') {
     font-size: 26px;
   }
