@@ -9,7 +9,7 @@
     margin: 12px 0;
     line-height: 1.5;
 
-    @include transition(font-size 250ms ease);
+    transition: font-size 250ms ease;
     
     @include responsive('s') {
       font-size: modular-scale($font-size-base, $heading-scale / 1.05, $i, 6); // 15:16 Minor second
@@ -68,7 +68,7 @@ blockquote {
   color: get-color('grey');
   background: get-color('offwhite');
 
-  @include box-shadow(8px 8px 8px -6px get-color('black', 0.25));
+  box-shadow: 8px 8px 8px -6px get-color('black', 0.25);
 
   p {
     font-style: italic;
@@ -79,7 +79,6 @@ blockquote {
   &::before,
   &::after {
     position: absolute;
-    // display: block;
     height: 0; // Prevents quotation marks from ending up in the wrong place 
     color: get-color('grey-light');
 

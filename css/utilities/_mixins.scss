@@ -6,24 +6,3 @@
     @content;
   }
 }
-
-// Skipping this since autoprefixer does it for me
-// keeping the code here until I know whether or not autoprefixer is even allowed
-
-/// Cross-browser box shadow
-/// @param {Arglist} $args - Box-shadow
-@mixin box-shadow($args...) {
-  // -webkit-box-shadow: $args;
-  // -moz-box-shadow: $args;
-  box-shadow: $args;
-}
-
-/// Cross-browser transition animations
-/// @param {Arglist} $args - Transition
-@mixin transition($args...) {
-  // -webkit-transition: $args;
-  // -moz-transition: $args;
-  // -ms-transition: $args;
-  // -o-transition: $args;
-  transition: $args;  
-}
