@@ -61,7 +61,7 @@ img {
   &-landing {
     position: relative;
     min-height: 500px;
-    background: url('../assets/arabica-aromatic-beverage-678654.webp') center / cover no-repeat; /* Fallback */
+    background: url('../assets/arabica-aromatic-beverage-678654.jpg') center / cover no-repeat; /* Fallback */
     filter: saturate(1.5); // Color pop!
     background-attachment: fixed;
     
@@ -80,7 +80,7 @@ img {
   }
 
   &-menu {
-    background: url('../assets/mike-kenneally-tNALoIZhqVM-unsplash.webp') center / cover no-repeat;
+    background: url('../assets/mike-kenneally-tNALoIZhqVM-unsplash.jpg') center / cover no-repeat;
     background-attachment: fixed;
 
     // Skip loading image on mobile devices
@@ -90,7 +90,7 @@ img {
   }
   
   &-locations {
-    background: url('../assets/art-beverage-black-982612.webp') center / cover no-repeat;
+    background: url('../assets/art-beverage-black-982612.jpg') center / cover no-repeat;
     background-attachment: fixed;
 
     // Skip loading image on mobile devices again
